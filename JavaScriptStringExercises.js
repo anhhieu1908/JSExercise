@@ -138,14 +138,10 @@ function solve(a, b)
 }
 
 
-function solve(str_1, str_2):
-    large_str = str_1 + str_2
-    diff_str = ''
-    for small_String in large_str:
-        if small_String in str_1 and small_String in str_2:
-            continue
-        diff_str += small_String
-    return diff_str
+function solve(a, b)
+{
+   return (a+b).split("").filter(c => !a.includes(c) || !b.includes(c)).join("");
+}
 
 // ******************************** Exercise 5 ********************************************************************************************************************************
 // Complete the solution so that it reverses the string passed into it.
