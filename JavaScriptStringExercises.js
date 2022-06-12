@@ -99,6 +99,11 @@ function formatMoney(amount)
     return '$' + amount;
   }
 
+// using toFixed convert number to string retain the number of decimal places
+function formatMoney(num){
+    return '$' + num.toFixed(2);
+}
+
 // ******************************** Exercise 4 ********************************************************************************************************************************
 // In this Kata, you will be given two strings a and b and your task will be to return the characters that are not common in the two strings.
 
@@ -110,8 +115,6 @@ function formatMoney(amount)
 // Notice also that you return the characters from the first string concatenated with those from the second string.
 
 // More examples in the tests cases.
-
-// Good luck!
 
 function solve(a, b)
 {
@@ -132,7 +135,17 @@ function solve(a, b)
     }
     
     return result;
-};
+}
+
+
+function solve(str_1, str_2):
+    large_str = str_1 + str_2
+    diff_str = ''
+    for small_String in large_str:
+        if small_String in str_1 and small_String in str_2:
+            continue
+        diff_str += small_String
+    return diff_str
 
 // ******************************** Exercise 5 ********************************************************************************************************************************
 // Complete the solution so that it reverses the string passed into it.
